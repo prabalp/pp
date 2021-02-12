@@ -6,13 +6,13 @@ function nps(){
 
     const n=12
 
-    var expt=n*tp;
+    var expt=n*(60-tp);
     var num = (roi/(100*n)+1)**expt
     var deno= roi/(100*n);
 
     var X= (mi*num)/deno
 
-    var totalInvest=mi*tp*12;
+    var totalInvest=mi*(60-tp)*12;
     var intEarned= X-totalInvest;
     var maturityAmount=0.6*X;
     var aInvest=0.4*X;
