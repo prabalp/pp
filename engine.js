@@ -18,8 +18,8 @@ function sip(){
     var totalValue=X;
     
     document.getElementById('totalInvest').innerHTML="Total Investment: " + totalInvest
-    document.getElementById('intEarned').innerHTML="Total Investment: " + intEarned
-    document.getElementById('totalValue').innerHTML="Total Investment: " + totalValue
+    document.getElementById('intEarned').innerHTML="Intrest Earned: " + intEarned
+    document.getElementById('totalValue').innerHTML="Total Value: " + totalValue
     
     
     }
