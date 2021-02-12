@@ -17,10 +17,14 @@ function sip(){
     var intEarned= X-totalInvest;
     var totalValue=X;
     
-    document.getElementById('totalInvest').innerHTML="Total Investment: " + totalInvest
-    document.getElementById('intEarned').innerHTML="Intrest Earned: " + intEarned
-    document.getElementById('totalValue').innerHTML="Total Value: " + totalValue
+    document.getElementById('totalInvest').innerHTML="Total Investment: " + Math.round(totalInvest)
+    document.getElementById('intEarned').innerHTML="Intrest Earned: " + Math.round(intEarned)
+    document.getElementById('totalValue').innerHTML="Total Value: " + Math.round(totalValue)
     
     
     }
     
+
+
+
+

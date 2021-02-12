@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPF Calculator</title>
+</head>
+<body>
+    <div>
+        <a href="./index.html">SIP</a>
+        <a href="./ppf.html">PPF</a>
+        <a href="./nps.html">NPS</a>
+        <a href="./sav.html">SAVING</a>
+
+    </div>
+    <p>PPF CALCULATOR</p>
+    
+    <div>
+        <input type="numb" id='mi_ppf' placeholder='Monthly Investment' required>
+        <!-- <input type="numb" id='roi' placeholder='Expected rate of Intrest' required> -->
+        <input type="numb" id='tp_ppf' placeholder='Time period' required>
+
+        <button type="button" onclick="ppf()">Dont click me</button>
+
+        <p id="totalInvest_ppf"></p>
+        <p id="intEarned_ppf"></p>
+        <p id="totalValue_ppf"></p>
+
+    </div>
+    
+    
+
+
+    <script src="ppf.js"></script>
+
+</body>
+</html>
