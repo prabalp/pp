@@ -2,7 +2,7 @@ function ppf(){
     const mi=document.getElementById('mi_ppf').value;
     const tp=document.getElementById('tp_ppf').value;
 
-    const roi=0.071
+    const roi=7.1
     const n=12
 
     var expt=n*tp;
