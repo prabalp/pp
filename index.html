@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+</head>
+<body>
+    
+    <div>
+        <input type="numb" id='mi' placeholder='Monthly Investment' required>
+        <input type="numb" id='roi' placeholder='Expected rate of Intrest' required>
+        <input type="numb" id='tp' placeholder='Time period' required>
+
+        <button type="button" onclick="sip()">Dont click me</button>
+
+        <p id="totalInvest"></p>
+        <p id="intEarned"></p>
+        <p id="totalValue"></p>
+
+    </div>
+    <p id="demo"></p>
+    
+
+
+    <script src="engine.js"></script>
+
+</body>
+</html>
