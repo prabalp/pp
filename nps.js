@@ -19,8 +19,8 @@ function nps(){
 
     document.getElementById('totalInvest_nps').innerHTML="Total Investment: " + Math.round(totalInvest)
     document.getElementById('intEarned_nps').innerHTML="Intrest Earned: " + Math.round(intEarned)
-    document.getElementById('maturityAmount').innerHTML="Intrest Earned: " + Math.round(maturityAmount)
-    document.getElementById('ex').innerHTML="Annuity Investment: " + Math.round(intEarned)
+    document.getElementById('maturityAmount').innerHTML="Maturity Amount: " + Math.round(maturityAmount)
+    document.getElementById('ex').innerHTML="Annuity Investment: " + Math.round(aInvest)
 
     
     
