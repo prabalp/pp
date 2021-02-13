@@ -14,6 +14,30 @@
         <a href="./sav.html">SAVING</a>
 
     </div>
-    <h1>Bann raha hai</h1>
+    <p>SAVING CALCULATOR</p>
+    
+    <div>
+        <input type="numb" id='ia_sav' placeholder='Initial Amount' required>
+        <input type="numb" id='mc_sav' placeholder='Monthly Contribution' required>
+        <input type="numb" id='roi_sav' placeholder='Rate of Intrest' required>
+        <form action="">
+
+            <select name="toc" id="toc_sav" placeholder="Time of contribution">
+                <option value="a">End of month</option>
+                <option value="b">Beginning of month</option>
+    
+            </select>
+        </form>
+        <input type="numb" id="d_sav" placeholder="Duration" required>
+
+        <button type="button" onclick="sav()">Dont click me</button>
+
+        <p id="totalInvest_sav"></p>
+        <p id="intEarned_sav"></p>
+        <p id="totalValue_sav"></p>
+
+    </div>
+
+    <script src="sav.js"></script>
 </body>
 </html>
