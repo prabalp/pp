@@ -23,7 +23,7 @@ if(toc == 'a'){
 
 
 }else if(toc == 'b'){
-    var Xb= ia*trm1 + (mc*(trm2n))
+    var Xb= ia*trm1 + (mc*(trm2n/trm2d)*(1+trm2d))
 
     var totalInvest=ia+(mc*n*t);
     var intEarned= Xb-totalInvest;
