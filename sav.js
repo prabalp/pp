@@ -17,13 +17,13 @@ var trm2d=(roi/(100*n))
 if(toc == 'a'){
     var Xa= ia*trm1 + (mc*(trm2n/trm2d))
 
-    var totalInvest=ia+(mc*n*t);
+    var totalInvest=ia + (mc*n*t);
     var intEarned= Xa-totalInvest;
     var totalValue=Xa;
 
 
 }else if(toc == 'b'){
-    var Xb= ia*trm1 + (mc*(trm2n))
+    var Xb= ia*trm1 + (mc*(trm2n/trm2d)*(1+trm2d))
 
     var totalInvest=ia+(mc*n*t);
     var intEarned= Xb-totalInvest;
