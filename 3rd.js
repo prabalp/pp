@@ -47,9 +47,9 @@ function th(){
     console.log("first loop ends")
 
     for(let k= 0; k< 4; k++){
-        document.getElementById('sav_table').rows[k].cells[0].innerHTML='After '+(t[k] + 1*1)+' years : ';
+        document.getElementById('sav_table').rows[k+1].cells[0].innerHTML='After '+(t[k] + 1*1)+' years : ';
         console.log("loop working"+k)
-        document.getElementById('sav_table').rows[k].cells[1].innerHTML=Math.round(ans_sav[k]);}
+        document.getElementById('sav_table').rows[k+1].cells[1].innerHTML=Math.round(ans_sav[k]);}
 
     console.log("working4.....")    
     
@@ -74,15 +74,15 @@ function th(){
     }
 
     for(let k= 0; k< 4; k++){
-        document.getElementById('sip_table').rows[k].cells[0].innerHTML='After '+(t[k] + 1*1) +' years : ';
+        document.getElementById('sip_table').rows[k+1].cells[0].innerHTML='After '+(t[k] + 1*1) +' years : ';
         console.log("loop working_sip"+k)
-        document.getElementById('sip_table').rows[k].cells[1].innerHTML=Math.round(ans_sip[k]);}
+        document.getElementById('sip_table').rows[k+1].cells[1].innerHTML=Math.round(ans_sip[k]);}
 
 
 
 
 
-    // // nsp
+    // // failed ppf
     // var mc_nsp=0.06*ms;
     // var i_nsp=0.10;
 
@@ -103,6 +103,26 @@ function th(){
 
 
     // nsp
+    var mc_nps=0.06*ms;
+    var i_nps=10;
+
+    var T= 59*1-age;
+
+    console.log(T)
+
+    var ans = mc_nps*((( ((i_nps/(100*n))+1)**(n*T) -1) * ((i_nps/(100*n))+1))/(i_nps/(100*n)))
+
+    var ti_nps = mc_nps *12*T
+    var ma_nps = 0.6*ans
+    var ai_nps = 0.4*ans
+
+    document.getElementById('ti_nps').innerHTML="Total Investment: " + Math.round(ti_nps)
+    document.getElementById('ma_nps').innerHTML="Maturity Amount: " + Math.round(ma_nps)
+    document.getElementById('ai_nps').innerHTML="Annuity Investment: " + Math.round(ai_nps)
+
+
+
+
 
 
 
