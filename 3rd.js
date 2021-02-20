@@ -5,7 +5,7 @@ function th(){
 
     const m=0.4*ms
     const n= 12
-    const i = 0.04
+    const i = 4
     const tu=1
 
     var num= (1+(i/(100*n)))**(n*tu) - 1
@@ -13,11 +13,13 @@ function th(){
 
     var X= (m*num)/deno;
 
+    document.getElementById('int').innerHTML= "Saving account balance after one year: " + Math.round(X)
+
     // saving account
     var ia=X
     var mc_sav=0.06*ms
-    var roi=0.04
-    // const toc=
+    var roi=4
+    
     const t=[4,9,14,19]
 
     console.log("working2.....")
@@ -26,7 +28,7 @@ function th(){
 
     // const n=12
     var expt = t.map(function(element){
-        return element*n;
+        return element * n;
     });
 
     console.log("working3.....")
@@ -45,7 +47,7 @@ function th(){
     console.log("first loop ends")
 
     for(let k= 0; k< 4; k++){
-        document.getElementById('sav_table').rows[k].cells[0].innerHTML='After'+t[k]+'years : ';
+        document.getElementById('sav_table').rows[k].cells[0].innerHTML='After '+(t[k] + 1*1)+' years : ';
         console.log("loop working"+k)
         document.getElementById('sav_table').rows[k].cells[1].innerHTML=Math.round(ans_sav[k]);}
 
@@ -54,7 +56,7 @@ function th(){
 
     // sip
     var mc_sip=0.28*ms;
-    var i_sip=0.15
+    var i_sip=15
 
     // var expt=n*tp;--done
     // var nterm1= ((1+(roi/(100*n)))**expt)-1;
@@ -67,12 +69,12 @@ function th(){
     var ans_sip = new Array(4);
     for(let j= 0; j< 4; j++){
 
-        ans_sip[j]= mc_sip*(( ((i_sip/(100*n))+1)**expt[j] -1 )/(i_sip/(100*n)))
+        ans_sip[j]= mc_sip*((( ((i_sip/(100*n))+1)**expt[j] -1) * ((i_sip/(100*n))+1))/(i_sip/(100*n)))
         console.log("loop working_sip"+j)
     }
 
     for(let k= 0; k< 4; k++){
-        document.getElementById('sip_table').rows[k].cells[0].innerHTML='After'+t[k]+'years : ';
+        document.getElementById('sip_table').rows[k].cells[0].innerHTML='After '+(t[k] + 1*1) +' years : ';
         console.log("loop working_sip"+k)
         document.getElementById('sip_table').rows[k].cells[1].innerHTML=Math.round(ans_sip[k]);}
 
@@ -80,21 +82,27 @@ function th(){
 
 
 
+    // // nsp
+    // var mc_nsp=0.06*ms;
+    // var i_nsp=0.10;
+
+    // var ans_nsp = new Array(4);
+    // for(let j= 0; j< 4; j++){
+
+    //     ans_nsp[j]= mc_nsp*(( ((i_nsp/(100*n))+1)**expt[j] -1 )/(i_nsp/(100*n)))
+    //     console.log("loop working_nsp"+j)
+    // }
+
+    // for(let k= 0; k< 4; k++){
+    //     document.getElementById('nsp_table').rows[k].cells[0].innerHTML='After '+t[k]+' years : ';
+    //     console.log("loop working_sip"+k)
+    //     document.getElementById('nsp_table').rows[k].cells[1].innerHTML=Math.round(ans_nsp[k]);}
+
+
+
+
+
     // nsp
-    var mc_nsp=0.06*ms;
-    var i_nsp=0.10;
-
-    var ans_nsp = new Array(4);
-    for(let j= 0; j< 4; j++){
-
-        ans_nsp[j]= mc_nsp*(( ((i_nsp/(100*n))+1)**expt[j] -1 )/(i_nsp/(100*n)))
-        console.log("loop working_nsp"+j)
-    }
-
-    for(let k= 0; k< 4; k++){
-        document.getElementById('nsp_table').rows[k].cells[0].innerHTML='After'+t[k]+'years : ';
-        console.log("loop working_sip"+k)
-        document.getElementById('nsp_table').rows[k].cells[1].innerHTML=Math.round(ans_nsp[k]);}
 
 
 
